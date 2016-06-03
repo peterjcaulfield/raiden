@@ -5,8 +5,8 @@
   *        grunt unit:config   - attempts to run the corresponding config in the jasmine config object
   *                              e.g if you want coverage run grunt unit:coverage 
   */
-module.exports = function(grunt) {
-  grunt.registerTask('unit', 'run the unit tests', function(config) {
-    grunt.task.run('mochaTest:' + (arguments.length ? config : 'test'));
+module.exports = (grunt) => {
+  grunt.registerTask('unit', 'run the unit tests', (config) => {
+    grunt.task.run(`mochaTest:${config ? config : 'test'}`);
   });
 }
