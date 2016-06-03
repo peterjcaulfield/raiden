@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+var program = require('commander');
+
+program
+    .option('-e, --env <env>', 'the environment key which specifies the hostname')
+    .parse(process.argv);
+
+console.log(program);

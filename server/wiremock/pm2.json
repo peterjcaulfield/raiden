@@ -1,0 +1,18 @@
+{
+  "apps": [{
+        "name": "wiremock",
+        "cwd": ".",
+        "exec_interpreter": "none",
+        "exec_mode": "fork",
+        "script": "java",
+        "args": [
+            "-jar", 
+            "./server/wiremock/bin/wiremock-1.57-standalone.jar",
+            "--root-dir=./server/wiremock",
+            "--port=8000"
+        ],
+        "node-args": [],
+        "out_file": "./server/wiremock/logs/stdout.log",
+        "error_file": "./server/wiremock/logs/error.log"
+  }]  
+}
