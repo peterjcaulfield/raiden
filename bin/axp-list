@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+var program = require('commander'),
+    cmdList = require('../lib/cmds/list');
+
+program
+    .option('-e, --envs', 'list the enviroments')
+    .option('-r, --requests', 'list the requests')
+    .parse(process.argv);
+
+cmdList.exec(program.envs ? 'envs' : 'requests');
