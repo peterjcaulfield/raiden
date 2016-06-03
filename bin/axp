@@ -1,13 +1,10 @@
 #!/usr/bin/env node
 
-// deps
-var program = require('commander'),
-    yaml = require('js-yaml'),
-    fs   = require('fs');
-
-// store .axp contents to global
+var program = require('commander');
 
 program
     .version('0.0.1')
     .command('request [name]', 'execute the named request')
     .parse(process.argv);
+
+
