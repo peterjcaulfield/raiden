@@ -5,6 +5,8 @@ var program = require('commander'),
 program
     .option('-e, --env <env>', 'the environment key which specifies the hostname')
     .option('-q, --query <query>', 'query string to append to the url ex: foo=bar&baz=qux')
+    .option('-s, --sync', 'execute the requests synchronously (default)')
+    .option('-a, --async', 'execute the requests asynchronously')
     .parse(process.argv);
 
 request.exec(program);
