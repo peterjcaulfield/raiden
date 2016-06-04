@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 var program = require('commander'),
-    config = require('../lib/config').getConfig();
+    request = require('../lib/cmds/request');
 
 program
     .option('-e, --env <env>', 'the environment key which specifies the hostname')
     .parse(process.argv);
 
+request.exec(program);
 
-console.log('fooooo');
