@@ -4,6 +4,7 @@ var program = require('commander'),
 
 program
     .option('-e, --env <env>', 'the environment key which specifies the hostname')
+    .option('-q, --query <query>', 'query string to append to the url ex: foo=bar&baz=qux')
     .parse(process.argv);
 
 request.exec(program);
