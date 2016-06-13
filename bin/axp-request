@@ -10,9 +10,9 @@ program
     .option('-s, --sync', 'execute the requests synchronously (default)')
     .option('-a, --async', 'execute the requests asynchronously')
     .option('-m, --minimal', 'minimal output')
-    .option('-r, --raw', 'raw  output')
+    .option('-h, --headers', 'just output headers')
+    .option('-b, --body', 'just output body')
     .option('-i, --info', 'print statistics')
-    .option('-d, --detailed', 'print detailed statistics')
     .parse(process.argv);
 
 new RequestCommand(program, config).exec();
