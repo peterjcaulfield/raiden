@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 var program = require('commander'),
-    request = require('../lib/cmds/request');
+    RequestCommand = require('../lib/cmds/request'),
+    config = require('../lib/config').getConfig();
+
 
 program
     .option('-e, --env <env>', 'the environment key which specifies the hostname')
@@ -8,7 +10,7 @@ program
     .option('-s, --sync', 'execute the requests synchronously (default)')
     .option('-a, --async', 'execute the requests asynchronously')
     .option('-m, --minimal', 'minimal output')
+    .option('-i, --info', 'print statistics')
     .parse(process.argv);
 
-request.exec(program);
-
+new RequestCommand(program, config).exec();
