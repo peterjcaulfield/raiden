@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 var program = require('commander'),
-    RequestCommand = require('../lib/cmds/request'),
-    config = require('../lib/config');
+    config = require('../lib/config'),
+    RequestCommand = require('../lib/cmds/request');
 
 
 program
