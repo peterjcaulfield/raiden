@@ -1,0 +1,14 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/cookie"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "content-type": "application/json",
+            "cookie" : "foo=bar; baz=qux;"
+        },
+        "bodyFileName": "cookie.json"
+    }
+}
