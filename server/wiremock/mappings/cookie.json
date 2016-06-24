@@ -7,7 +7,7 @@
         "status": 200,
         "headers": {
             "content-type": "application/json",
-            "cookie" : "foo=bar; baz=qux;"
+            "set-cookie" : "foo=bar;"
         },
         "bodyFileName": "cookie.json"
     }
