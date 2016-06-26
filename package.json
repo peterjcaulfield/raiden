@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/peterjcaulfield/axp#readme",
   "dependencies": {
+    "bluebird": "^3.4.1",
     "chalk": "^1.1.3",
     "chance": "^1.0.3",
     "commander": "^2.9.0",
@@ -32,9 +33,9 @@
     "load-grunt-configs": "^1.0.0",
     "load-grunt-tasks": "^3.5.0",
     "mocha": "^2.5.3",
-    "node-fetch": "^1.5.3",
     "pm2": "^1.1.3",
     "qs": "^6.2.0",
+    "request-promise": "^3.0.0",
     "schema-inspector": "^1.6.4"
   },
   "devDependencies": {
