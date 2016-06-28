@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-var program = require('commander'),
+
+const program = require('commander'),
     config = require('../lib/config'),
     RequestCommand = require('../lib/cmds/request');
 
