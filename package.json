@@ -40,7 +40,6 @@
     "eslint": "^2.11.1",
     "eslint-config-airbnb": "^9.0.1",
     "eslint-plugin-react": "^5.1.1",
-    "grunt-mocha-test": "^0.12.7",
     "jest-cli": "^12.1.1"
   },
   "bin": {
