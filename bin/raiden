@@ -9,7 +9,10 @@ program
     .command('list', 'list items from config');
 
 program
-    .parse(process.argv)
+    .command('initpath', 'return the initpath', { noHelp: true });
+
+program
+    .parse(process.argv);
 
 
 

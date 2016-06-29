@@ -1,0 +1,6 @@
+#!/usr/bin/env node
+
+path = require('path');
+
+console.log(path.resolve(`${__dirname}/init`));
+
