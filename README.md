@@ -170,12 +170,12 @@ register:
     method: POST
     endpoint: register
     body:
-        username: placeholder # raiden will replace this value with a generated value using transform defined below
+        username: placeholder # raiden will replace this value
         password: password
     json: true
     transforms:
         - transform: [string, { prefix: hans_gruber_, length: 10 }]
-          key: username
+          key: username # execute transform on the username value of the payload
 ```
 
 The above transform would change the Json POST body of the register request to something like:
@@ -198,7 +198,7 @@ register:
     endpoint: register
     body:
         data:
-            username: placeholder # raiden will replace this value with a generated value using transform defined below
+            username: placeholder # raiden will replace this value 
             password: password
     json: true
     transforms:
