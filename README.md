@@ -11,6 +11,7 @@ execute requests against API's without the overhead of jumping into a browser or
 - Tabbed autocompletion of request names/enviroments making any interaction with `raiden` convenient and fast. 
 - Dynamic request payloads from static configs. No more manual changing of the request payload between requests.
 - Cookie Jar (cookies are stored and used in subsequent requests for a given domain/path)
+- Easy to define requests in yaml format
 
 #Installation
 
@@ -18,7 +19,7 @@ execute requests against API's without the overhead of jumping into a browser or
 
 To enable tab-completion for bash, add the following to your `.bashrc` script:
 
-`which raiden > /dev/null && . "$( raiden initpath)"`
+`which raiden > /dev/null && . "$( raiden initpath )"`
 
 #Getting started
 
@@ -55,7 +56,28 @@ Using the above two example configs, we could then execute an API request with `
 
 This would issue a `GET` request to `http://dev_api.localhost.com/posts`
 
-`raiden` supports most requests supported by the node request library. These include:
+`raiden` supports most of the node request library API. An overview of whats possible with a request schema is below:
+
+### GET request with query string and custom headers
+
+```
+# ~/.raiden/requests.yml
+
+get_posts:
+    endpoint: posts
+    method: GET
+    headers: 
+        User-Agent: raiden
+    qs:             
+        rpp: 10
+        page: 2
+
+```
+
+With this config `raiden get_posts` would execute a `GET` request to default host e.g 
+`http://127.0.0.1:8888/posts/?rrp=10&page=2`
+
+---
 
 ### Forms
 
@@ -90,9 +112,11 @@ multipart_form_request:
 If you provide a file path as a value, `raiden` takes care of transforming it into a piped binary stream for the request. 
 Any other values will be left unchanged.
 
+---
+
 ### Json
 
-Sending a json payload is simple:
+Defining a POST request with a json payload is simple:
 
 ```
 # ~/.raiden/requests.yml
@@ -106,4 +130,4 @@ json_request:
         text: this is some post text
     json: true # let raiden know we want to POST as json
 ```
-
+---
