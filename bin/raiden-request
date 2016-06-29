@@ -13,7 +13,6 @@ program
     .option('-m, --minimal', 'minimal output')
     .option('-h, --headers', 'just output headers')
     .option('-b, --body', 'just output body')
-    .option('-i, --info', 'print statistics')
     .parse(process.argv);
 
 new RequestCommand(program, config).exec();

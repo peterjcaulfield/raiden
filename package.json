@@ -1,5 +1,5 @@
 {
-  "name": "axp",
+  "name": "raiden",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/peterjcaulfield/axp.git"
+    "url": "git+https://github.com/peterjcaulfield/raiden.git"
   },
   "author": "peter caulfield",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/peterjcaulfield/axp/issues"
+    "url": "https://github.com/peterjcaulfield/raiden/issues"
   },
-  "homepage": "https://github.com/peterjcaulfield/axp#readme",
+  "homepage": "https://github.com/peterjcaulfield/raiden#readme",
   "dependencies": {
     "bluebird": "^3.4.1",
     "chance": "^1.0.3",
@@ -43,7 +43,7 @@
     "jest-cli": "^12.1.1"
   },
   "bin": {
-    "axp": "./bin/axp"
+    "raiden": "./bin/raiden"
   },
   "jest": {
   }
