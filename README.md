@@ -53,7 +53,7 @@ get_posts:
 
 Using the above two example configs, we could then execute an API request with:
 ```
-raiden request -e dev_api get_posts`
+raiden request -e dev_api get_posts
 ```
 
 This would issue a `GET` request to `http://dev_api.localhost.com/posts`
