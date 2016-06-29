@@ -65,6 +65,7 @@ This would issue a `GET` request to `http://dev_api.localhost.com/posts`
 
 ```
 # ~/.raiden/requests.yml
+
 url_encoded_form_request:
     endpoint: form
     method: POST
@@ -77,6 +78,7 @@ url_encoded_form_request:
 
 ```
 # ~/.raiden/requests.yml
+
 multipart_form_request:
     endpoint: upload
     method: POST
@@ -94,6 +96,7 @@ Sending a json payload is simple:
 
 ```
 # ~/.raiden/requests.yml
+
 json_request:
     endpoint: posts
     method: POST
