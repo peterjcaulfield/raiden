@@ -1,4 +1,4 @@
-# raiden
+# Raiden
 [![Build Status](https://api.travis-ci.org/peterjcaulfield/raiden.svg)](http://travis-ci.org/peterjcaulfield/raiden)
 
 `raiden` is CLI for interacting with web API's. With some simple configs, `raiden` will allow you to
