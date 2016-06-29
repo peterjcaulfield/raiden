@@ -165,6 +165,7 @@ you can use a transform like so:
 
 ```
 # ~/.raiden/requests.yml
+
 register:
     method: POST
     endpoint: register
@@ -182,6 +183,7 @@ using the pipe `|` seperator to delineate the nested object keys. Ex:
 
 ```
 # ~/.raiden/requests.yml
+
 register:
     method: POST
     endpoint: register
