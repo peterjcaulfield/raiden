@@ -174,8 +174,17 @@ register:
         password: password
     json: true
     transforms:
-        - transform: [string, { prefix: hans_gruber, length: 20 }]
+        - transform: [string, { prefix: hans_gruber_, length: 10 }]
           key: username
+```
+
+The above transform would change the Json POST body of the register request to something like:
+
+```
+{
+    username: hans_gruber_hkJ983jFn5
+    password: password
+}
 ```
 
 `raiden` transforms can also handle generating dynamic values for nested payload props. We just need to specify the path to the prop
@@ -193,7 +202,7 @@ register:
             password: password
     json: true
     transforms:
-        - transform: [string, { prefix: hans_gruber, length: 20 }]
+        - transform: [string, { prefix: hans_gruber_, length: 10 }]
           key: data|username 
 ```
 The API of the `transforms` request property is detailed in the API section.
