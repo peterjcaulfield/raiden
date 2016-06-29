@@ -10,9 +10,13 @@ _raiden_complete() {
         COMPREPLY=( $(compgen -W "$completions" -- "$cur_word") )
     elif [[ $subcommand == request ]]
     then
-        if [[ "$cur_word" == -* ]]
+        if [[ "$cur_word" == - ]]
         then
-            local completions=$(__request_completions options) 
+            local completions=$(__request_completions short_options) 
+            COMPREPLY=( $(compgen -W "$completions" -- "$cur_word") )
+        elif [[ "$cur_word" == -* ]] 
+        then
+            local completions=$(__request_completions long_options) 
             COMPREPLY=( $(compgen -W "$completions" -- "$cur_word") )
         elif [[ "$prev_word" == --env ]] || [[ "$prev_word" == -e ]] 
         then
@@ -40,8 +44,10 @@ __list_completions() {
 }
 
 __request_completions() {    
-    if [[ $1 == options ]] ; then
+    if [[ $1 == long_options ]] ; then
         echo "--env --query --async --minimal --headers --body"
+    elif [[ $1 == short_options ]] ; then
+        echo "-e -q -a -m -h -b"
     elif [[ $1 == values ]] ; then
         echo "$(raiden list --envs)"
     elif [[ $1 == args ]] ; then
