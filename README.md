@@ -6,12 +6,12 @@ execute requests against API's without the overhead of jumping into a browser or
 
 # Why
 
-`raiden` speeds up your workflow with features like:
+`raiden` can drastically speed up your workflow with features like:
 
-- Tabbed autocompletion of request names/enviroments making any interaction with `raiden` convenient and fast. 
+- Tabbed autocompletion of request names/enviroments makes any interaction with `raiden` convenient and fast. 
 - Dynamic request payloads from static configs. No more manual changing of the request payload between requests.
-- Cookie Jar (cookies are stored and used in subsequent requests for a given domain/path)
-- Easy to define requests in yaml format
+- Cookie Jar out of the box. Cookies are persisted and used in subsequent requests.
+- Requests are very easy to define. `raiden` all does the heavy lifting.
 
 ---
 
@@ -30,10 +30,7 @@ To enable tab-completion for bash, add the following to your `.bashrc` script:
 First create a hidden `.raiden` folder in your home directory. You then need to create two config files, one for 
 the API hostnames and one for the individual API request definitions.
 
-
-## ~/.raiden/envs.yml
-
-hostnames are stored in this config as key/value. You can also define a `default` host to be used for when 
+Hostnames are stored `~/.raiden/envs.yml` as key/value. You can also define a `default` host to be used for when 
 no host is provided to `raiden`. An example config looks like so:
 
 ```
@@ -44,9 +41,7 @@ dev_api: dev_api.localhost.com:8888
 
 ```
 
-## ~/.raiden/requests.yml
-
-This config contains individual API request definitions. An simple example config with one request defined looks like so:
+API request definitions are stored in ~/.raiden/requests.yml`. An simple example config with one request defined looks like so:
 
 ```
 # ~/.raiden/requests.yml
@@ -56,11 +51,15 @@ get_posts:
 
 ```
 
-Using the above two example configs, we could then execute an API request with `raiden request -e dev_api get_posts`
+Using the above two example configs, we could then execute an API request with:
+```
+raiden request -e dev_api get_posts`
+```
 
 This would issue a `GET` request to `http://dev_api.localhost.com/posts`
 
-`raiden` supports most of the node request library API.
+`raiden` supports most of [node request library](https://github.com/request/request/blob/master/README.md) API which
+it is built on top of by way of request-promise.
 
 --- 
 
@@ -80,7 +79,8 @@ get_posts:
 
 ```
 
-With this config `raiden get_posts` would execute a `GET` request to default host e.g 
+With this config `raiden get_posts` would execute a `GET` request to default host e.g:
+
 `http://127.0.0.1:8888/posts/?rrp=10&page=2`
 
 ---
@@ -111,11 +111,11 @@ multipart_form_request:
     endpoint: upload
     method: POST
     formData:
-        my_field: value
-        file_1: test.txt # this will be read relative to the .raiden directory
+        my_field: value 
+        file_1: test.txt # this path will be read relative to the .raiden directory
         file_2: /absolute/path/to/img.png # you can also provide absolute paths
 ```
-If you provide a file path as a value, `raiden` takes care of transforming it into a piped binary stream for the request. 
+If you provide a file path as a value, `raiden` will take care of grabbing binary data needed for the request.
 Any other values will be left unchanged.
 
 ---
@@ -140,7 +140,7 @@ json_request:
 ---
 ## TLS/SSL Protocol
 
-Define a request that utilises a self signed SSL cert:
+A request that utilises a self signed SSL cert:
 
 ```
 # ~/.raiden/requests.yml
