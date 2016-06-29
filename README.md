@@ -138,7 +138,7 @@ json_request:
 ```
 
 ---
-## TSL/SSL Protocol
+## TLS/SSL Protocol
 
 Define a request that utilises a self signed SSL cert:
 
