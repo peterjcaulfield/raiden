@@ -41,7 +41,7 @@ dev_api: dev_api.localhost.com:8888
 
 ```
 
-API request definitions are stored in ~/.raiden/requests.yml`. An simple example config with one request defined looks like so:
+API request definitions are stored in `~/.raiden/requests.yml`. An simple example config with one request defined looks like so:
 
 ```
 # ~/.raiden/requests.yml
