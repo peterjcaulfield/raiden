@@ -84,8 +84,8 @@ multipart_form_request:
     method: POST
     formData:
         my_field: value
-        file_1: test.txt // this will be read relative to the .raiden directory
-        file_2: /absolute/path/to/img.png // you can also provide absolute paths
+        file_1: test.txt # this will be read relative to the .raiden directory
+        file_2: /absolute/path/to/img.png # you can also provide absolute paths
 ```
 If you provide a file path as a value, `raiden` takes care of transforming it into a piped binary stream for the request. 
 Any other values will be left unchanged.
@@ -104,6 +104,6 @@ json_request:
         title: my post
         author: Ernest Hemingway
         text: this is some post text
-    json: true // let raiden know we want to POST as json
+    json: true # let raiden know we want to POST as json
 ```
 
