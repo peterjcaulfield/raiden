@@ -11,7 +11,7 @@ execute http requests without the overhead of jumping into a browser or fiddling
 - Tabbed autocompletion makes any interaction with `raiden` convenient and fast. 
 - Dynamic request payloads from static configs. No more manual changing of the request payload between requests.
 - Cookie Jar out of the box. Cookies are persisted and used in subsequent requests.
-- Requests are very easy to define. `raiden` all does the heavy lifting.
+- Requests are very easy to define. `raiden` does the heavy lifting.
 
 ---
 
