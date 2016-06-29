@@ -56,9 +56,13 @@ Using the above two example configs, we could then execute an API request with `
 
 This would issue a `GET` request to `http://dev_api.localhost.com/posts`
 
-`raiden` supports most of the node request library API. An overview of whats possible with a request schema is below:
+`raiden` supports most of the node request library API.
 
-### GET request with query string and custom headers
+--- 
+
+# Example request definitions
+
+## GET request with query string and custom headers
 
 ```
 # ~/.raiden/requests.yml
@@ -79,11 +83,11 @@ With this config `raiden get_posts` would execute a `GET` request to default hos
 
 ---
 
-### Forms
+## Forms
 
 `raiden` supports `application/x-www-form-urlencoded` and `multipart/form-data` form uploads.
 
-#### application/x-www-form-urlencoded (URL-Encoded forms)
+### application/x-www-form-urlencoded (URL-Encoded forms)
 
 ```
 # ~/.raiden/requests.yml
@@ -96,7 +100,7 @@ url_encoded_form_request:
         baz: qux
 ```
 
-#### multipart/form-data (Multipart form uploads)
+### multipart/form-data (Multipart form uploads)
 
 ```
 # ~/.raiden/requests.yml
@@ -114,7 +118,7 @@ Any other values will be left unchanged.
 
 ---
 
-### Json
+## Json
 
 Defining a POST request with a json payload is simple:
 
