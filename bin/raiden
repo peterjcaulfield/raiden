@@ -6,7 +6,7 @@ program
     .command('request [name]', 'execute the named request');
 
 program
-    .command('list', 'list items from config');
+    .command('config', 'interact with .raiden configs');
 
 program
     .command('initpath', 'return the initpath', { noHelp: true });

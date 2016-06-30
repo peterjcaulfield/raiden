@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
 const program = require('commander'),
-    config = require('../lib/config'),
-    RequestCommand = require('../lib/cmds/request');
+      RequestCommand = require('../lib/cmds/request');
 
 
 program
@@ -15,4 +14,4 @@ program
     .option('-b, --body', 'just output body')
     .parse(process.argv);
 
-new RequestCommand(program, config).exec();
+new RequestCommand(program).exec();

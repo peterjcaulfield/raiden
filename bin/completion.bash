@@ -49,9 +49,9 @@ __request_completions() {
     elif [[ $1 == short_options ]] ; then
         echo "-e -q -a -m -h -b"
     elif [[ $1 == values ]] ; then
-        echo "$(raiden list --envs)"
+        echo "$(raiden config --list envs)"
     elif [[ $1 == args ]] ; then
-        echo "$(raiden list)"
+        echo "$(raiden config --list requests)"
     fi
 }
 
