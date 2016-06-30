@@ -3,15 +3,9 @@
 const program = require('commander');
 
 program
-    .command('request [name]', 'execute the named request');
-
-program
-    .command('config', 'interact with .raiden configs');
-
-program
-    .command('initpath', 'return the initpath', { noHelp: true });
-
-program
+    .command('request [name]', 'execute the named request')
+    .command('config', 'interact with .raiden configs')
+    .command('initpath', 'return the initpath', { noHelp: true })
     .parse(process.argv);
 
 

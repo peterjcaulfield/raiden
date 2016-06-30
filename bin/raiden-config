@@ -5,7 +5,7 @@ const program = require('commander'),
 
 program
     .option('-l, --list <config>', 'list config items for supplied config type: requests || envs')
-    .option('-s, --set <key> <value>', 'set a raiden config value')
+    .option('-s, --set <key> [value]', 'set a raiden config value')
     .parse(process.argv);
 
 new ConfigCmd(program).exec();
