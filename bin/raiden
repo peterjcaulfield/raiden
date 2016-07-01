@@ -3,13 +3,10 @@
 const program = require('commander');
 
 program
-    .command('request [name]', 'execute the named request');
-
-program
-    .command('list', 'list items from config');
-
-program
-    .parse(process.argv)
+    .command('request [name]', 'execute the named request')
+    .command('config', 'interact with .raiden configs')
+    .command('initpath', 'return the initpath', { noHelp: true })
+    .parse(process.argv);
 
 
 

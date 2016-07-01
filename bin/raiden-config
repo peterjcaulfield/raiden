@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+
+const program = require('commander'),
+      ConfigCmd = require('../lib/cmds/config');
+
+program
+    .option('-l, --list [config]', 'list config items for supplied config type: requests || envs')
+    .option('-s, --set <key> [value]', 'set a raiden config value')
+    .parse(process.argv);
+
+new ConfigCmd(program).exec();
