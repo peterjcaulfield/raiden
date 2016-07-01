@@ -98,7 +98,9 @@ reqfile:acme_api_requests.yml
 
 ---
 
-## Custom headers
+## Example Request Definitions
+
+### Custom headers
 
 ```
 # ~/.raiden/requests.yml
@@ -120,11 +122,11 @@ With this config `raiden get_posts` would execute a `GET` request to default hos
 
 ---
 
-## Forms
+### Forms
 
 `raiden` supports `application/x-www-form-urlencoded` and `multipart/form-data` form uploads.
 
-### application/x-www-form-urlencoded (URL-Encoded forms)
+#### application/x-www-form-urlencoded (URL-Encoded forms)
 
 ```
 # ~/.raiden/requests.yml
@@ -137,7 +139,7 @@ url_encoded_form_request:
         baz: qux
 ```
 
-### multipart/form-data (Multipart form uploads)
+#### multipart/form-data (Multipart form uploads)
 
 ```
 # ~/.raiden/requests.yml
@@ -153,9 +155,9 @@ multipart_form_request:
 If you provide a file path as a value, `raiden` will take care of grabbing binary data needed for the request.
 Any other values will be left unchanged.
 
----
+--
 
-## Json
+### Json
 
 Defining a POST request with a json payload is simple:
 
@@ -172,8 +174,8 @@ json_request:
     json: true # let raiden know we want to POST as json
 ```
 
----
-## TLS/SSL Protocol
+--
+### TLS/SSL Protocol
 
 A request that utilises a self signed SSL cert:
 
@@ -189,8 +191,9 @@ login:
 Check out the [node request library](https://github.com/request/request/blob/master/README.md) for more information on
 configuration possible with the `agentOptions` object.
 
----
-## Dynamic request payloads
+--
+
+### Dynamic request payloads
 `raiden` allows you to generate dynamic payload data from your static request config using the `transforms` key.
 
 It achieves this by integrating with the fantastic [chance library](https://github.com/chancejs/chancejs) to generate the data. 
@@ -242,4 +245,4 @@ register:
 ```
 The API of the `transforms` request property is detailed in the API section.
 
----
+--
