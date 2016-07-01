@@ -1,12 +1,14 @@
 _raiden_complete() {
+
     COMPREPLY=()
+
     local cur_word="${COMP_WORDS[COMP_CWORD]}"
     local prev_word="${COMP_WORDS[COMP_CWORD - 1]}"
     local subcommand="${COMP_WORDS[1]}"
 
     if [[ "$prev_word" == raiden ]]
     then
-        local completions="request list"
+        local completions="request config"
         COMPREPLY=( $(compgen -W "$completions" -- "$cur_word") )
     elif [[ $subcommand == request ]]
     then
@@ -23,23 +25,29 @@ _raiden_complete() {
             local completions=$(__request_completions values)
             COMPREPLY=( $(compgen -W "$completions" -- "$cur_word") )
         else
-            local completions=$(__request_completions args  )
+            local completions=$(__request_completions args)
             COMPREPLY=( $(compgen -W "$completions" -- "$cur_word") )
         fi
-    elif [[ "$subcommand" == list ]]
+    elif [[ "$subcommand" == config ]]
     then
         if [[ "$cur_word" == -* ]]
         then
-            local completions=$( __list_completions options)
+            local completions=$( __config_completions long_options)
+            COMPREPLY=( $(compgen -W "$completions" -- "$cur_word") )
+        elif [[ "$prev_word" == --list ]] || [[ "$prev_word" == -l ]]
+        then 
+            local completions=$(__config_completions config_keys)
             COMPREPLY=( $(compgen -W "$completions" -- "$cur_word") )
         fi
     fi
 
 }
 
-__list_completions() {
-    if [[ $1 == options ]] ; then
-        echo "--e"
+__config_completions() {
+    if [[ $1 == long_options ]] ; then
+        echo "--list --set"
+    elif [[ $1 == config_keys ]] ; then
+        echo "envs requests"
     fi
 }
 
