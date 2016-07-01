@@ -21,7 +21,7 @@ execute http requests without the overhead of jumping into a browser or fiddling
 - [Forms](#forms)
 - [Json](#json)
 - [TLS/SSL Protocol](#tlsssl-protocol)
-- [Dynamic Request Payloads](#dynamic-requests-payload)
+- [Dynamic Request Payloads](#dynamic-request-payload)
 
 
 ## Installation
