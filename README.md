@@ -65,7 +65,7 @@ get_posts:
 
 Using the above two example configs, we could then execute an API request with:
 ```
-raiden request -e dev_api get_posts
+$ raiden request -e dev_api get_posts
 ```
 
 This would issue a `GET` request to `http://dev_api.localhost.com/posts`
@@ -75,18 +75,26 @@ it is built on top of by way of request-promise.
 
 ---
 
----
 ## Multiple request configs
 
 `raiden` supports multiple request definition config files. If you are working with multiple API's and you wish to segregate the request definitions 
-at the API level to different files, simply create additional .yml config files in the `~/.raiden` directory. You can then tell `raiden` which config file
+at the API level to different files, simply create additional .yml config files in the `~/.raiden` directory. 
+
+You can then tell `raiden` which config file
 to use for request definitions using the `raiden config` command with the `--set` option:
 
 ```
-raiden config --set reqfile acme_api_requests.yml
+$ raiden config --set reqfile acme_api_requests.yml
 ```
 
-`raiden` will then use `~/.raiden/acme_api_requests.yml` for the request definitions.
+`raiden` will then use `~/.raiden/acme_api_requests.yml` for the request definitions. 
+
+You can confirm the file that's currently being used for request definitions by executing:
+
+```
+$ raiden config --list
+reqfile:acme_api_requests.yml
+```
 
 ---
 
