@@ -19,11 +19,12 @@ execute http requests without the overhead of jumping into a browser or fiddling
 - [Installation](#installation)
 - [Getting started](#getting-started)
 - [Using multiple request configs](#using-multiple-request-configs)
-- [Custom Headers](#custom-headers)
-- [Forms](#forms)
-- [Json](#json)
-- [TLS/SSL Protocol](#tlsssl-protocol)
-- [Dynamic Request Payloads](#dynamic-request-payloads)
+- [Example request definitions](#example-request-definitions)
+    - [Custom Headers](#custom-headers)
+    - [Forms](#forms)
+    - [Json](#json)
+    - [TLS/SSL Protocol](#tlsssl-protocol)
+    - [Dynamic Request Payloads](#dynamic-request-payloads)
 
 ---
 
@@ -120,7 +121,7 @@ With this config `raiden get_posts` would execute a `GET` request to default hos
 
 `http://127.0.0.1:8888/posts/?rrp=10&page=2`
 
----
+--
 
 ### Forms
 
