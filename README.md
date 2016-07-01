@@ -18,7 +18,7 @@ execute http requests without the overhead of jumping into a browser or fiddling
 ## Table of contents
 - [Installation](#installation)
 - [Getting started](#getting-started)
-- [Multiple request configs](#multiple-request-configs)
+- [Using multiple request configs](#using-multiple-request-configs)
 - [Custom Headers](#custom-headers)
 - [Forms](#forms)
 - [Json](#json)
@@ -75,7 +75,7 @@ it is built on top of by way of request-promise.
 
 ---
 
-## Multiple request configs
+## Using multiple request configs
 
 `raiden` supports multiple request definition config files. If you are working with multiple API's and you wish to segregate the request definitions 
 at the API level to different files, simply create additional .yml config files in the `~/.raiden` directory. 
