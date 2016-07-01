@@ -14,15 +14,18 @@ execute http requests without the overhead of jumping into a browser or fiddling
 - Requests are very easy to define. `raiden` does the heavy lifting.
 
 ---
+
 ## Table of contents
 - [Installation](#installation)
 - [Getting started](#getting-started)
+- [Multiple request configs](#multiple-request-configs)
 - [Custom Headers](#custom-headers)
 - [Forms](#forms)
 - [Json](#json)
 - [TLS/SSL Protocol](#tlsssl-protocol)
 - [Dynamic Request Payloads](#dynamic-request-payloads)
 
+---
 
 ## Installation
 
@@ -69,6 +72,21 @@ This would issue a `GET` request to `http://dev_api.localhost.com/posts`
 
 `raiden` supports most of [node request library](https://github.com/request/request/blob/master/README.md) API which
 it is built on top of by way of request-promise.
+
+---
+
+---
+## Multiple request configs
+
+`raiden` supports multiple request definition config files. If you are working with multiple API's and you wish to segregate the request definitions 
+at the API level to different files, simply create additional .yml config files in the `~/.raiden` directory. You can then tell `raiden` which config file
+to use for request definitions using the `raiden config` command with the `--set` option:
+
+```
+raiden config --set reqfile acme_api_requests.yml
+```
+
+`raiden` will then use `~/.raiden/acme_api_requests.yml` for the request definitions.
 
 ---
 
