@@ -4,7 +4,7 @@
 `raiden` is CLI for interacting with web API's. With some simple configs, `raiden` will allow you to
 execute http requests without the overhead of jumping into a browser or fiddling with `curl`.  
 
-# Why
+## Why
 
 `raiden` can drastically speed up your workflow with features like:
 
@@ -14,8 +14,17 @@ execute http requests without the overhead of jumping into a browser or fiddling
 - Requests are very easy to define. `raiden` does the heavy lifting.
 
 ---
+## Table of contents
+- [Installation](#installation)
+- [Getting started](#getting-started)
+- [Custom Headers](#custom-headers)
+- [Forms](#forms)
+- [Json](#json)
+- [TLS/SSL Protocol](#tlsssl-protocol)
+- [Dynamic Request Payloads](#dynamic-requests-payload)
 
-# Installation
+
+## Installation
 
 `npm install -g raiden`
 
@@ -25,7 +34,7 @@ To enable tab-completion for bash, add the following to your `.bashrc` script:
 
 ---
 
-# Getting started
+## Getting started
 
 First create a hidden `.raiden` folder in your home directory. You then need to create two config files, one for 
 the API hostnames and one for the individual API request definitions.
@@ -61,7 +70,7 @@ This would issue a `GET` request to `http://dev_api.localhost.com/posts`
 `raiden` supports most of [node request library](https://github.com/request/request/blob/master/README.md) API which
 it is built on top of by way of request-promise.
 
---- 
+---
 
 ## Custom headers
 
