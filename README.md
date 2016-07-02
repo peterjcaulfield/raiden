@@ -227,7 +227,7 @@ The above transform would change the Json POST body of the register request to s
 ```
 
 `raiden` transforms can also handle generating dynamic values for nested payload props. We just need to specify the path to the prop
-using the pipe `|` seperator to delineate the nested object keys. Ex:
+using a period '.' seperator to delineate the nested object keys. Ex:
 
 ```
 # ~/.raiden/requests.yml
@@ -242,7 +242,7 @@ register:
     json: true
     transforms:
         - transform: [string, { prefix: hans_gruber_, length: 10 }]
-          key: data|username 
+          key: data.username 
 ```
 The API of the `transforms` request property is detailed in the API section.
 
