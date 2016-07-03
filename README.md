@@ -17,12 +17,13 @@ execute http requests without the overhead of jumping into a browser or fiddling
 
 ## Table of contents
 - [Installation](#installation)
-- [Getting started](#getting-started)
-- [Using multiple request configs](#using-multiple-request-configs)
-- [Example request definitions](#example-request-definitions)
+- [Getting Started](#getting-started)
+- [Using Multiple Request Configs](#using-multiple-request-configs)
+- [Example Request Definitions](#example-request-definitions)
     - [Custom Headers](#custom-headers)
     - [Forms](#forms)
     - [Json](#json)
+    - [Http Authentication](#http-authentication)
     - [TLS/SSL Protocol](#tlsssl-protocol)
     - [Dynamic Request Payloads](#dynamic-request-payloads)
 
@@ -50,7 +51,7 @@ no host is provided to `raiden`. An example config looks like so:
 # ~/.raiden/envs.yml
 
 default: 127.0.0.1:8888
-dev_api: dev_api.localhost.com:8888
+staging: staging.localhost.com:8888
 
 ```
 
@@ -66,13 +67,10 @@ get_posts:
 
 Using the above two example configs, we could then execute an API request with:
 ```
-$ raiden request -e dev_api get_posts
+$ raiden request -e staging get_posts
 ```
 
-This would issue a `GET` request to `http://dev_api.localhost.com/posts`
-
-`raiden` supports most of [node request library](https://github.com/request/request/blob/master/README.md) API which
-it is built on top of by way of request-promise.
+This would issue a `GET` request to `http://staging.localhost.com/posts`
 
 ---
 
@@ -101,6 +99,12 @@ reqfile:acme_api_requests.yml
 
 ## Example Request Definitions
 
+`raiden` endeavours to support most of the [node request library](https://github.com/request/request/blob/master/README.md) API which
+it is built on top of by way of request-promise. `raiden` will pass nearly all request config props transparently through to the request lib
+unchanged. The notable exceptions are detailed below (filepath values being transformed where applicable in forms/agent options etc). As such
+it is helpful to consult the [node request library docs](https://github.com/request/request#requestoptions-callback) if you are looking to do
+something with a request that is not detailed in the following examples.
+
 ### Custom headers
 
 ```
@@ -117,7 +121,7 @@ get_posts:
 
 ```
 
-With this config `raiden get_posts` would execute a `GET` request to default host e.g:
+With this config `raiden get_posts` would execute a `GET` request to default host:
 
 `http://127.0.0.1:8888/posts/?rrp=10&page=2`
 
@@ -176,6 +180,26 @@ json_request:
 ```
 
 --
+
+### HTTP Authentication
+
+```
+
+# ~/.raiden/requests.yml
+
+login:
+    protocol: https
+    endpoint: login
+    auth:
+        username: username
+        password: password
+        sendImmediately: false
+
+```
+See the [request library](https://github.com/request/request#http-authentication) for more information on this configration.
+
+--
+
 ### TLS/SSL Protocol
 
 A request that utilises a self signed SSL cert:
@@ -189,12 +213,12 @@ login:
     agentOptions:
         ca: /path/to/ca.cert.pem
 ```
-Check out the [node request library](https://github.com/request/request/blob/master/README.md) for more information on
-configuration possible with the `agentOptions` object.
+See the [request library](https://github.com/request/request#tlsssl-protocol) for more information on this configration.
 
 --
 
 ### Dynamic request payloads
+
 `raiden` allows you to generate dynamic payload data from your static request config using the `transforms` key.
 
 It achieves this by integrating with the fantastic [chance library](https://github.com/chancejs/chancejs) to generate the data. 
@@ -227,7 +251,7 @@ The above transform would change the Json POST body of the register request to s
 ```
 
 `raiden` transforms can also handle generating dynamic values for nested payload props. We just need to specify the path to the prop
-using a period '.' seperator to delineate the nested object keys. Ex:
+using a period '.' seperator to delineate the nested object keys:
 
 ```
 # ~/.raiden/requests.yml
@@ -244,6 +268,17 @@ register:
         - transform: [string, { prefix: hans_gruber_, length: 10 }]
           key: data.username 
 ```
-The API of the `transforms` request property is detailed in the API section.
 
---
+The API of the `transforms` property looks like:
+
+- `transform` - array
+    - `transform[0]` - the method to call in the [chance library](https://github.com/chancejs/chancejs) to generate the new value
+    - `transform[1]` - object containing the arguments to the transformation
+        - `prefix` - sting to prepend to the generated value
+        - `suffix` - string to append to the generated value
+        - any remaining args will be passed to the chance library method that was specified.
+- `key` - string specifying the property in the request payload that will be transformed.
+
+Check out the [chance library docs](http://chancejs.com/) for what's possible with the data generation.
+
+---
