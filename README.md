@@ -179,9 +179,9 @@ json_request:
     endpoint: posts
     method: POST
     body:
-        title: my post
-        author: Ernest Hemingway
-        text: this is some post text
+        author: W. Whitman
+        title: Leaves of Grass
+        text: A blade of grass is the journeywork of the stars...
     json: true # let raiden know we want to POST as json
 ```
 
