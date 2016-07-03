@@ -271,7 +271,7 @@ register:
 
 The API of the `transforms` property looks like:
 
-- transforms - array of transform objects
+- `transforms` - array of transform objects
     - `transform` - array
         - `transforms[0]` - the method to call in the [chance library](https://github.com/chancejs/chancejs) to generate the new value.
         - `transforms[1]` - object containing the arguments to the transformation.
