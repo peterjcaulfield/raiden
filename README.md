@@ -275,7 +275,7 @@ register:
           key: data.username 
 ```
 
-The API of the `transforms` property looks like:
+#### transforms API
 
 - `transforms` - array of transform objects.
     - `transform` - array containing the transform configuration.
