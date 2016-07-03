@@ -72,6 +72,15 @@ $ raiden request -e staging get_posts
 
 This would issue a `GET` request to `http://staging.localhost.com/posts`
 
+Multiple requests can be given to `raiden request` at the same time as arguments:
+
+```
+raiden request -e staging request1 request2 request3 ...
+```
+
+Use `raiden --help` and `raiden $command --help` (where `$command` is the name of the command) to print the help text and see what 
+exec options are available. 
+
 ---
 
 ## Using multiple request configs
