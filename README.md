@@ -78,8 +78,7 @@ Multiple requests can be given to `raiden request` at the same time as arguments
 raiden request -e staging request1 request2 request3 ...
 ```
 
-Use `raiden --help` and `raiden $command --help` (where `$command` is the name of the command) to print the help text and see what 
-exec options are available. 
+Use `raiden --help` to learn more about raidens exec options and commands. 
 
 ---
 
