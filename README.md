@@ -1,17 +1,18 @@
 # Raiden
 [![Build Status](https://api.travis-ci.org/peterjcaulfield/raiden.svg)](http://travis-ci.org/peterjcaulfield/raiden)
 
-`raiden` is CLI for interacting with web API's. With some simple configs, `raiden` will allow you to
-execute http requests without the overhead of jumping into a browser or fiddling with `curl`.  
+`raiden` is a CLI built on top of the node [request](https://github.com/request/request/blob/master/README.md) module and is 
+designed for interacting with web API's. With some simple configs, `raiden` will allow you to execute http requests without 
+the overhead of jumping into a browser or fiddling with `curl`.  
 
 ## Why
 
 `raiden` can drastically speed up your workflow with features like:
 
-- Tabbed autocompletion makes any interaction with `raiden` convenient and fast. 
+- Tabbed autocompletion. 
 - Dynamic request payloads from static configs. No more manual changing of the request payload between requests.
 - Cookie Jar out of the box. Cookies are persisted and used in subsequent requests.
-- Requests are very easy to define. `raiden` does the heavy lifting.
+- Easy to define requests. `raiden` does the heavy lifting.
 
 ---
 
