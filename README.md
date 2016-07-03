@@ -24,6 +24,7 @@ the overhead of jumping into a browser or fiddling with `curl`.
     - [Simple GET Request](#simple-get-request)
     - [Forms](#forms)
     - [Json](#json)
+    - [Custom Headers](#custom-headers)
     - [Http Authentication](#http-authentication)
     - [TLS/SSL Protocol](#tlsssl-protocol)
     - [Dynamic Request Payloads](#dynamic-request-payloads)
@@ -184,6 +185,21 @@ json_request:
         title: Leaves of Grass
         text: A blade of grass is the journeywork of the stars...
     json: true # let raiden know we want to POST as json
+```
+
+--
+
+### Custom Headers
+
+```
+# ~/.raiden/requests.yml
+
+get_posts:
+    endpoint: posts
+    method: GET
+    headers: 
+        User-Agent: raiden
+
 ```
 
 --
