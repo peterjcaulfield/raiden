@@ -271,13 +271,14 @@ register:
 
 The API of the `transforms` property looks like:
 
-- `transform` - array
-    - `transform[0]` - the method to call in the [chance library](https://github.com/chancejs/chancejs) to generate the new value
-    - `transform[1]` - object containing the arguments to the transformation
-        - `prefix` - sting to prepend to the generated value
-        - `suffix` - string to append to the generated value
-        - any remaining args will be passed to the chance library method that was specified.
-- `key` - string specifying the property in the request payload that will be transformed.
+- transforms - array of transform objects
+    - `transform` - array
+        - `transforms[0]` - the method to call in the [chance library](https://github.com/chancejs/chancejs) to generate the new value.
+        - `transforms[1]` - object containing the arguments to the transformation.
+            - `prefix` - sting to prepend to the generated value.
+            - `suffix` - string to append to the generated value.
+            - any remaining args will be passed to the chance library method that was specified.
+    - `key` - string specifying the property in the request payload that will be transformed.
 
 Check out the [chance library docs](http://chancejs.com/) for what's possible with the data generation.
 
