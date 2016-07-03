@@ -2,7 +2,7 @@
 [![Build Status](https://api.travis-ci.org/peterjcaulfield/raiden.svg)](http://travis-ci.org/peterjcaulfield/raiden)
 
 `raiden` is a CLI built on top of the node [request](https://github.com/request/request/blob/master/README.md) module and is 
-designed for interacting with web API's. With some simple configs, `raiden` will allow you to execute http requests without 
+designed for interacting with web API's. With some simple configs `raiden` allows you to execute http requests without 
 the overhead of jumping into a browser or fiddling with `curl`.  
 
 ## Why
