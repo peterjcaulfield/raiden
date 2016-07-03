@@ -20,7 +20,7 @@ execute http requests without the overhead of jumping into a browser or fiddling
 - [Getting Started](#getting-started)
 - [Using Multiple Request Configs](#using-multiple-request-configs)
 - [Example Request Definitions](#example-request-definitions)
-    - [Simple Get Request](#simple-get-request)
+    - [Simple GET Request](#simple-get-request)
     - [Forms](#forms)
     - [Json](#json)
     - [Http Authentication](#http-authentication)
@@ -113,7 +113,7 @@ unchanged. The notable exceptions are detailed below (filepath values being tran
 it is helpful to consult the [node request library docs](https://github.com/request/request#requestoptions-callback) if you are looking to do
 something with a request that is not detailed in the following examples.
 
-### Simple Get Request
+### Simple GET Request
 
 ```
 # ~/.raiden/requests.yml
