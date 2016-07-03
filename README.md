@@ -128,7 +128,7 @@ get_posts:
 
 ```
 
-With this config `raiden get_posts` would execute a `GET` request to default host:
+With this config `raiden request get_posts` would execute a `GET` request to default host:
 
 `http://127.0.0.1:8888/posts/?rrp=10&page=2`
 
