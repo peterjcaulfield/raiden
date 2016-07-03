@@ -7,7 +7,7 @@ const program = require('commander'),
 program
     .option('-e, --env <env>', 'the environment key which specifies the hostname')
     .option('-q, --query <query>', 'query string to append to the url ex: foo=bar&baz=qux')
-    .option('-d, --data <data>', 'data to write to the request body')
+    .option('-d, --data <data>', 'data to write to the request body in the format: foo=bar,foo.baz=buku')
     .option('-s, --sync', 'execute the requests synchronously (default)')
     .option('-a, --async', 'execute the requests asynchronously')
     .option('-m, --minimal', 'minimal output')
