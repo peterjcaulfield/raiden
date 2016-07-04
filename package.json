@@ -19,6 +19,7 @@
     "node": ">=6.0.0" 
   },
   "author": "peter caulfield",
+  "email": "peterjcaulfield@gmail.com",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/peterjcaulfield/raiden/issues"
