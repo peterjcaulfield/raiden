@@ -18,6 +18,7 @@
   "engines": {
     "node": ">=6.0.0" 
   },
+  "os": ["darwin", "linux"],
   "author": "peter caulfield",
   "email": "peterjcaulfield@gmail.com",
   "license": "MIT",
