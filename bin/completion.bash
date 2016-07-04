@@ -12,11 +12,7 @@ _raiden_complete() {
         COMPREPLY=( $(compgen -W "$completions" -- "$cur_word") )
     elif [[ $subcommand == request ]]
     then
-        if [[ "$cur_word" == - ]]
-        then
-            local completions=$(__request_completions short_options) 
-            COMPREPLY=( $(compgen -W "$completions" -- "$cur_word") )
-        elif [[ "$cur_word" == -* ]] 
+        if [[ "$cur_word" == -* ]]
         then
             local completions=$(__request_completions long_options) 
             COMPREPLY=( $(compgen -W "$completions" -- "$cur_word") )
