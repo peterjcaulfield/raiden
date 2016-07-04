@@ -12,7 +12,11 @@
   "keywords": {
     "CLI",
     "API",
+    "http",
     "devtool"
+  },
+  "engines": {
+    "node": ">=6.0.0" 
   },
   "author": "peter caulfield",
   "license": "MIT",
