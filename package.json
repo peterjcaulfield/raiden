@@ -3,7 +3,10 @@
   "version": "1.0.0-alpha.1",
   "description": "CLI for interacting with web API's",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "postinstall": {
+        "node ./bin/postinstall" 
+    }
   },
   "repository": {
     "type": "git",
@@ -48,9 +51,6 @@
     "load-grunt-configs": "^1.0.0",
     "load-grunt-tasks": "^3.5.0",
     "pm2": "^1.1.3"
-  },
-  "postinstall": {
-    "node ./bin/postinstall" 
   },
   "bin": {
     "raiden": "./bin/raiden"
