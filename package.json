@@ -4,9 +4,7 @@
   "description": "CLI for interacting with web API's",
   "scripts": {
     "test": "jest",
-    "postinstall": {
-        "node ./bin/postinstall" 
-    }
+    "postinstall": "node ./bin/postinstall" 
   },
   "repository": {
     "type": "git",
