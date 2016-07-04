@@ -292,7 +292,7 @@ register:
             password: password
     json: true
     transforms:
-        - transform: [string, { prefix: hans_gruber_, length: 10 }]
+        - transform: 
             method: string
             prefix: hans_gruber
             args: 
