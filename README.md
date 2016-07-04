@@ -262,9 +262,9 @@ register:
     transforms:
         - transform: 
             method: string
-            prefix: hans_gruber
             args: 
                 length: 10
+            prefix: hans_gruber
           key: username # execute transform on the username value of the payload
 ```
 
@@ -294,9 +294,9 @@ register:
     transforms:
         - transform: 
             method: string
-            prefix: hans_gruber
             args: 
                 length: 10
+            prefix: hans_gruber
           key: data.username 
 ```
 
