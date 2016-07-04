@@ -27,7 +27,9 @@
   },
   "devDependencies": {
     "babel-jest": "^12.1.0",
-    "eslint-config-airbnb": "^9.0.1",
+    "eslint": "^2.9.0",
+    "eslint-config-airbnb-base": "^3.0.1",
+    "eslint-plugin-import": "^1.10.1",
     "expect": "^1.20.1",
     "grunt": "^1.0.1",
     "grunt-exec": "^0.4.7",
