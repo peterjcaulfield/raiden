@@ -43,8 +43,8 @@ To enable tab-completion for bash, add the following to your `.bashrc` script:
 
 ## Getting started
 
-First create a hidden `.raiden` folder in your home directory. You then need to create two config files, one for 
-the API hostnames and one for the individual API request definitions.
+On install, a hidden `.raiden` folder will have been created in your home directory containing two `.yml` files, 
+one for the API hostnames and one for the individual API request definitions.
 
 Hostnames are stored `~/.raiden/envs.yml` as key/value. You can also define a `default` host to be used for when 
 no host is provided to `raiden`. An example config looks like so:
