@@ -12,6 +12,6 @@ if (!fs.existsSync(`${raidenRoot}/requests.yml`)) {
 }
 
 if (!fs.existsSync(`${raidenRoot}/envs.yml`)) {
-    fs.writeFileSync(`${raidenRoot}/envs.yml`, 'default:127.0.0.1:8888');
+    fs.writeFileSync(`${raidenRoot}/envs.yml`, 'default:127.0.0.1: 8888');
 }
 
