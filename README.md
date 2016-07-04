@@ -28,6 +28,7 @@ the overhead of jumping into a browser or fiddling with `curl`.
     - [Http Authentication](#http-authentication)
     - [TLS/SSL Protocol](#tlsssl-protocol)
     - [Dynamic Request Payloads](#dynamic-request-payloads)
+- [Additional Tips](#additional-tips)
 
 ---
 
@@ -313,6 +314,17 @@ register:
 Check out the [chance library docs](http://chancejs.com/) for what's possible with the data generation.
 
 ---
+### Additional Tips
+
+Autocomplete by default requires you to hit `tab` twice if there are multiple possible matches for the input. This annoying.
+I would highly suggest putting the following into your `~/.inputrc` for a nicer autocomplete experience:
+
+```
+set show-all-if-ambiguous on
+```
+
+---
+
 ### License 
 
 MIT
