@@ -1,17 +1,17 @@
 #!/usr/bin/env node
 
 const fs = require('fs'),
-      raidenRoot = `${process.env.home}./raiden`;
+      raidenRoot = `${process.env.HOME}/.raiden`;
 
 if (!fs.existsSync(raidenRoot)) {
    fs.mkdirSync(raidenRoot);
 }
 
 if (!fs.existsSync(`${raidenRoot}/requests.yml`)) {
-    fs.writeFileSync(`{raidenRoot}/requests.yml`);
+    fs.openSync(`${raidenRoot}/requests.yml`, 'w');
 }
 
 if (!fs.existsSync(`${raidenRoot}/envs.yml`)) {
-    fs.writeFileSync(`{raidenRoot}/envs.yml`);
+    fs.writeFileSync(`${raidenRoot}/envs.yml`, 'default:127.0.0.1:8888');
 }
 
