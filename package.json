@@ -1,8 +1,7 @@
 {
   "name": "raiden",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.0-alpha.1",
+  "description": "CLI for interacting with web API's",
   "scripts": {
     "test": "jest"
   },
@@ -10,8 +9,13 @@
     "type": "git",
     "url": "git+https://github.com/peterjcaulfield/raiden.git"
   },
+  "keywords": {
+    "CLI",
+    "API",
+    "devtool"
+  },
   "author": "peter caulfield",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/peterjcaulfield/raiden/issues"
   },
