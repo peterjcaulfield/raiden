@@ -313,3 +313,6 @@ register:
 Check out the [chance library docs](http://chancejs.com/) for what's possible with the data generation.
 
 ---
+### License 
+
+MIT
