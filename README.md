@@ -7,7 +7,7 @@ the overhead of jumping into a browser or fiddling with `curl`.
 
 ## Why
 
-`raiden` can drastically speed up your workflow with features like:
+`raiden` can drastically speed up your workflow when working with API's with features like:
 
 - Tabbed autocompletion. 
 - Dynamic request payloads from static configs. No more manual changing of the request payload between requests.
