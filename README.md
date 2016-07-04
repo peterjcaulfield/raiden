@@ -303,9 +303,9 @@ register:
 #### transforms API
 
 - `transforms` - array of transform objects.
-    - `transform` - object describing the transform
+    - `transform` - object describing the transform.
         - `method` - the method to call in the [chance library](https://github.com/chancejs/chancejs) to generate the new value.
-        -  `args` - object of arguments to pass to the chance libary method
+        -  `args` - object of arguments to pass to the chance libary method.
         - `prefix` - optional string to prepend to the generated value.
         - `suffix` - optional string to append to the generated value.
     - `key` - string specifying the property in the request payload that will be transformed.
