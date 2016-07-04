@@ -261,6 +261,10 @@ register:
     json: true
     transforms:
         - transform: [string, { prefix: hans_gruber_, length: 10 }]
+            method: string
+            prefix: hans_gruber
+            args: 
+                length: 10
           key: username # execute transform on the username value of the payload
 ```
 
@@ -289,18 +293,21 @@ register:
     json: true
     transforms:
         - transform: [string, { prefix: hans_gruber_, length: 10 }]
+            method: string
+            prefix: hans_gruber
+            args: 
+                length: 10
           key: data.username 
 ```
 
 #### transforms API
 
 - `transforms` - array of transform objects.
-    - `transform` - array containing the transform configuration.
-        - `transforms[0]` - the method to call in the [chance library](https://github.com/chancejs/chancejs) to generate the new value.
-        - `transforms[1]` - object containing the arguments to the transformation.
-            - `prefix` - sting to prepend to the generated value.
-            - `suffix` - string to append to the generated value.
-            - any remaining args will be passed to the chance library method that was specified.
+    - `transform` - object describing the transform
+        - `method` - the method to call in the [chance library](https://github.com/chancejs/chancejs) to generate the new value.
+        -  `args` - object of arguments to pass to the chance libary method
+        - `prefix` - optional string to prepend to the generated value.
+        - `suffix` - optional string to append to the generated value.
     - `key` - string specifying the property in the request payload that will be transformed.
 
 Check out the [chance library docs](http://chancejs.com/) for what's possible with the data generation.
