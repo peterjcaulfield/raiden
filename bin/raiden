@@ -3,8 +3,8 @@
 const program = require('commander');
 
 program
-    .command('request [name]', 'execute the named request')
-    .command('config', 'interact with .raiden configs')
+    .command('request <request>', 'execute a http request')
+    .command('config', 'interact with .raiden config files')
     .command('initpath', 'return the initpath', { noHelp: true })
     .parse(process.argv);
 

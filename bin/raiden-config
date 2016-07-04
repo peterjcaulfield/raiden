@@ -6,6 +6,14 @@ const program = require('commander'),
 program
     .option('-l, --list (requests|envs)', 'list config items for supplied config.')
     .option('-s, --set <key> <value>', 'set a raiden config value')
+    .on('--help', () => {
+        console.log('    Examples:'); 
+        console.log(); 
+        console.log('      $ raiden config --list'); 
+        console.log('      $ raiden config --list envs');
+        console.log('      $ raiden config --list requests');
+        console.log();
+    })
     .parse(process.argv);
 
 new ConfigCmd(program).exec();

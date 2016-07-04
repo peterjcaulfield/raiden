@@ -13,6 +13,14 @@ program
     .option('-m, --minimal', 'minimal output')
     .option('-h, --headers', 'just output headers')
     .option('-b, --body', 'just output body')
+    .on('--help', () => {
+        console.log('    Examples:'); 
+        console.log(); 
+        console.log('      $ raiden request -e staging get_posts'); 
+        console.log('      $ raiden request -e staging create_post get_posts'); 
+        console.log('      $ raiden request -e staging delete_post --data id=1'); 
+        console.log();
+    })
     .parse(process.argv);
 
 new RequestCommand(program).exec();
