@@ -4,7 +4,7 @@ const program = require('commander'),
       ConfigCmd = require('../lib/cmds/config');
 
 program
-    .option('-l, --list (requests|envs)', 'list config items for supplied config.')
+    .option('-l, --list <config>', 'list config items for supplied config.')
     .option('-s, --set <key> <value>', 'set a raiden config value')
     .on('--help', () => {
         console.log('    Examples:'); 
