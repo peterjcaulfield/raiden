@@ -9,12 +9,12 @@
     "type": "git",
     "url": "git+https://github.com/peterjcaulfield/raiden.git"
   },
-  "keywords": {
+  "keywords": [
     "CLI",
     "API",
     "http",
     "devtool"
-  },
+  ],
   "engines": {
     "node": ">=6.0.0" 
   },
