@@ -1,0 +1,8 @@
+__tests__
+__mocks__
+grunt
+server
+.eslintrc
+.jshintrc
+.travis.yml
+Gruntfile.js
