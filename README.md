@@ -58,7 +58,7 @@ staging: staging.localhost.com:8888
 
 ```
 
-*NOTE:* Do not include the protocol in the host definition. `raiden` will use `http` protocol by default for all requests.
+**NOTE:** Do not include the protocol in the host definition. `raiden` will use `http` protocol by default for all requests.
 If you want to use `https` set the `protocol` property in your request definition to `https`.
 
 API request definitions are stored in `~/.raiden/requests.yml`. A simple example config with one request defined looks like so:
