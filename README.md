@@ -47,6 +47,8 @@ To enable tab-completion for bash, add the following to your `.bashrc` script:
 On install, a hidden `.raiden` folder will have been created in your home directory containing two `.yml` files, 
 one for the API hostnames and one for the individual API request definitions.
 
+#### ~/.raiden/envs.yml
+
 Hostnames are stored `~/.raiden/envs.yml` as key/value. You can also define a `default` host to be used for when 
 no host is provided to `raiden`. An example config looks like so:
 
@@ -60,6 +62,8 @@ staging: staging.localhost.com:8888
 
 **NOTE:** Do not include the protocol in the host definition. `raiden` will use `http` protocol by default for all requests.
 If you want to use `https` set the `protocol` property in your request definition to `https`.
+
+#### ~/.raiden/requests.yml
 
 API request definitions are stored in `~/.raiden/requests.yml`. A simple example config with one request defined looks like so:
 
