@@ -75,6 +75,8 @@ get_posts:
 
 ```
 
+--
+
 Using the above two example configs, we could then execute an API request with:
 
 ```
