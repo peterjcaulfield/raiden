@@ -83,7 +83,7 @@ Using the above two example configs, we could then execute an API request with:
 $ raiden request -e staging get_posts
 ```
 
-This would issue a `GET` request to `http://staging.localhost.com/posts`
+This would issue a `GET` request to `http://staging.localhost.com:8888/posts`
 
 Multiple requests can be given to `raiden request` at the same time as arguments:
 
@@ -253,7 +253,7 @@ See the [request library](https://github.com/request/request#tlsssl-protocol) fo
 
 ### Dynamic request payloads
 
-`raiden` allows you to generate dynamic payload data from your static request config using the `transforms` key.
+`raiden` allows you to generate dynamic payload data from your static request config using the `transforms` prop.
 
 It achieves this by integrating with the fantastic [chance library](https://github.com/chancejs/chancejs) to generate the data. 
 A good use case example for a transform would be if you wanted to interact with a user registration API endpoint and it required 
@@ -283,8 +283,8 @@ The above transform would change the Json POST body of the register request to s
 
 ```
 {
-    username: hans_gruber_hkJ983jFn5
-    password: password
+    username: "hans_gruber_hkJ983jFn5"
+    password: "password"
 }
 ```
 
