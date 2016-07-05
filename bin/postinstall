@@ -7,6 +7,10 @@ if (!fs.existsSync(raidenRoot)) {
    fs.mkdirSync(raidenRoot);
 }
 
+if (!fs.existsSync(`${raidenRoot}/config.yml`)) {
+    fs.openSync(`${raidenRoot}/config.yml`, 'w');
+}
+
 if (!fs.existsSync(`${raidenRoot}/requests.yml`)) {
     fs.openSync(`${raidenRoot}/requests.yml`, 'w');
 }
