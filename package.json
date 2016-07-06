@@ -14,7 +14,8 @@
     "CLI",
     "API",
     "http",
-    "devtool"
+    "devtool",
+    "REST"
   ],
   "engines": {
     "node": ">=6.0.0" 
