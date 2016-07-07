@@ -1,5 +1,5 @@
 # Raiden
-[![Build Status](https://api.travis-ci.org/peterjcaulfield/raiden.svg)](http://travis-ci.org/peterjcaulfield/raiden)
+[![Build Status](https://api.travis-ci.org/peterjcaulfield/raiden.svg?branch=master)](http://travis-ci.org/peterjcaulfield/raiden)
 
 `raiden` is a CLI built on top of the node [request](https://github.com/request/request/blob/master/README.md) module and is 
 designed for interacting with http servers. With some simple configs `raiden` allows you to execute http requests without 
