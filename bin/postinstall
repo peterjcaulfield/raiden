@@ -11,6 +11,10 @@ if (!fs.existsSync(`${raidenRoot}/config.yml`)) {
     fs.openSync(`${raidenRoot}/config.yml`, 'w');
 }
 
+if (!fs.existsSync(`${raidenRoot}/cookies.json`)) {
+    fs.openSync(`${raidenRoot}/cookies.json`, 'w');
+}
+
 if (!fs.existsSync(`${raidenRoot}/requests.yml`)) {
     fs.openSync(`${raidenRoot}/requests.yml`, 'w');
 }
