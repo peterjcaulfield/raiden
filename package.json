@@ -1,7 +1,7 @@
 {
   "name": "raiden",
-  "version": "1.0.1-alpha",
-  "description": "CLI for interacting with web API's",
+  "version": "1.0.2",
+  "description": "CLI for interacting with http servers",
   "scripts": {
     "test": "jest",
     "postinstall": "node ./bin/postinstall" 
@@ -15,7 +15,8 @@
     "API",
     "http",
     "devtool",
-    "REST"
+    "REST",
+    "workflow"
   ],
   "engines": {
     "node": ">=6.0.0" 

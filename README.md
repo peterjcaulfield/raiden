@@ -2,12 +2,12 @@
 [![Build Status](https://api.travis-ci.org/peterjcaulfield/raiden.svg?branch=master)](http://travis-ci.org/peterjcaulfield/raiden)
 
 `raiden` is a CLI built on top of the node [request](https://github.com/request/request/blob/master/README.md) module and is 
-designed for interacting with http servers. With some simple configs `raiden` allows you to execute http requests without 
-the overhead of jumping into a browser or fiddling with `curl`.  
+designed for interacting with http servers. `raiden` is useful for development, testing and debugging. With some simple configs 
+`raiden` allows you to execute http requests without the overhead of jumping into a browser or fiddling with `curl`.
 
 ## Why
 
-`raiden` can drastically speed up your workflow when working with API's with features like:
+`raiden` can drastically speed up your workflow when working with http servers with features like:
 
 - Tabbed autocompletion. 
 - Dynamic request payloads from static configs. No more manual changing of the request payload between requests.
@@ -44,8 +44,7 @@ To enable tab-completion for bash, add the following to your `.bashrc` script:
 
 ## Getting started
 
-On install, a hidden `.raiden` folder will have been created in your home directory containing two `.yml` files, 
-one for the API hostnames and one for the individual API request definitions.
+On install, a hidden `.raiden` folder will have been created in your home directory containing several files.
 
 #### ~/.raiden/envs.yml
 
