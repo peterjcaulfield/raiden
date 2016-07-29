@@ -11,6 +11,7 @@ program
     .option('-s, --sync', 'execute the requests synchronously (default)')
     .option('-a, --async', 'execute the requests asynchronously')
     .option('-m, --minimal', 'minimal output')
+    .option('-v, --verbose', 'detailed output')
     .option('-h, --headers', 'just output headers')
     .option('-b, --body', 'just output body')
     .on('--help', () => {
