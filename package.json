@@ -46,7 +46,7 @@
     "expect": "^1.20.1",
     "grunt": "^1.0.1",
     "grunt-exec": "^0.4.7",
-    "jest-cli": "^12.1.1",
+    "jest-cli": "^16.0.1",
     "load-grunt-config": "^0.19.2",
     "load-grunt-configs": "^1.0.0",
     "load-grunt-tasks": "^3.5.0",
@@ -55,5 +55,9 @@
   "bin": {
     "raiden": "./bin/raiden"
   },
-  "jest": {}
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/jest_env.js"
+    ]
+  }
 }
